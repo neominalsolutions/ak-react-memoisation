@@ -12,6 +12,7 @@ import UseImperativeHandlerPage from './pages/useimperative.page';
 import UseMemoPage from './pages/usememo.page';
 import UseRefPage from './pages/useref.page';
 import './style.css';
+import UseReducerPage from './pages/use.reducer.page';
 
 // uygulamanın çalıştığı root element
 const root = ReactDOM.createRoot(
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
 			{
 				path: 'useImperativeHandle',
 				Component: UseImperativeHandlerPage,
+			},
+			{
+				path: 'useReducer',
+				Component: UseReducerPage,
 			},
 		],
 	},

@@ -1,6 +1,6 @@
 // React uygulamayı boostrapt edeceğimiz kod burada olacak.
 
-import React from 'react';
+import React, { useCallback } from 'react';
 import ReactDOM from 'react-dom/client';
 import Layout from './layouts/layout';
 
@@ -8,6 +8,7 @@ import Layout from './layouts/layout';
 import './style.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ReactMemoPage from './pages/react.memo.page';
+import UseCallBackPage from './pages/usecallback.page';
 
 // uygulamanın çalıştığı root element
 const root = ReactDOM.createRoot(
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
 			{
 				path: 'reactMemo',
 				Component: ReactMemoPage,
+			},
+			{
+				path: 'useCallback',
+				Component: UseCallBackPage,
 			},
 		],
 	},

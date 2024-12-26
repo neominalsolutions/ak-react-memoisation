@@ -54,6 +54,12 @@ function Header({ children }: HeaderProps) {
 				to="/useReducer"
 			>
 				Use Reducer
+			</NavLink>{' '}
+			<NavLink
+				className={({ isActive }) => (isActive ? 'active-link' : '')}
+				to="/customHook"
+			>
+				Custom Hook
 			</NavLink>
 			{children && <p>{children}</p>}
 		</div>

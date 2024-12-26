@@ -1,4 +1,6 @@
 import React, { memo, useState } from 'react';
+import { useProfile } from './custom.hook.page';
+import RolePermision from '../components/role.permission';
 
 // Not: React Memo ile Componenti sarmalladığımız durumda Parent Child Component ilişkisi olmalıdır. Parent Componentte bir değişiklik meydana gelidğinde child component render almasını önlemek için kullanılır.
 
@@ -6,17 +8,23 @@ function Parent() {
 	console.log('...parent rendering');
 	const [random, setRandom] = useState<number>(0);
 
+	const { getRoles } = useProfile();
+
+	console.log('roles', getRoles());
+
 	return (
 		<>
 			<h1>Parent Component</h1>
 			<p>{random}</p>
-			<button
-				onClick={() => {
-					setRandom(Math.random() * 100);
-				}}
-			>
-				Random Number
-			</button>
+			<RolePermision allowedRoles="SuperVisor">
+				<button
+					onClick={() => {
+						setRandom(Math.random() * 100);
+					}}
+				>
+					Random Number
+				</button>
+			</RolePermision>
 			<hr></hr>
 			{/* <Child /> */}
 			{/* <ChildMemo /> */}

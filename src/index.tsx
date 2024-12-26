@@ -13,6 +13,7 @@ import UseMemoPage from './pages/usememo.page';
 import UseRefPage from './pages/useref.page';
 import './style.css';
 import UseReducerPage from './pages/use.reducer.page';
+import CustomHookPage from './pages/custom.hook.page';
 
 // uygulamanın çalıştığı root element
 const root = ReactDOM.createRoot(
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
 			{
 				path: 'useReducer',
 				Component: UseReducerPage,
+			},
+			{
+				path: 'customHook',
+				Component: CustomHookPage,
 			},
 		],
 	},

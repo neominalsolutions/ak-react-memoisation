@@ -10,6 +10,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ReactMemoPage from './pages/react.memo.page';
 import UseCallBackPage from './pages/usecallback.page';
 import UseMemoPage from './pages/usememo.page';
+import UseRefPage from './pages/useref.page';
 
 // uygulamanın çalıştığı root element
 const root = ReactDOM.createRoot(
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
 			{
 				path: 'useMemo',
 				Component: UseMemoPage,
+			},
+			{
+				path: 'useRef',
+				Component: UseRefPage,
 			},
 		],
 	},
